@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div>
+        <div class="page-head">
+            <div class="search-container">
+                <form action='/search' method="post">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">Submit</button>
+                </form>
+                <a class="head-right head-a" href="/new"> + </a>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+
+        <div class="main-mid-container">
+            <br>
+            <br>
+            <table class="mytable">
+                {% for tag_id in tags_id %}
+                {% set id = tag_id['tag_id']%}
+                    <tr class="mytable-tr">
+                        <td class="mytable-td-tag mytable-td-hover ">
+                             <a class='mytable-tag-a mytable-text-size' href="/tag/{{id}}">{{id}}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <br>
+            <br>
+         </div>
+    </div>
+{% endblock %}

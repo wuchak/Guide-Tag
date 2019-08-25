@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <div class="main-mid-container">
+
+        <form action="{{ url_for('submit') }}" method="post">
+
+            <div>
+                <label for='input-1'>Tag ID</label>
+                <input id='input-1' class='edit-input' type="text" name="tag_id" placeholder="TAG ID...">
+            </div>
+            
+            <div>
+                <label for='input-2' >TAG NAME</label>
+                <input id='input-2' class='edit-input' type="text" name="tag_name" placeholder="TAG NAME...">
+            </div>
+
+            <div>
+                <label>TAG TYPE</label>
+                <select class='edit-select' name="tag_country">
+                    <option value="rubbish bin">rubbish bin</option>
+                    <option value="chair">chair</option>
+                    <option value="desk">desk</option>
+                </select> 
+            </div>
+            
+            <div>
+                <label>TAG INFO</label>
+                <br>
+                <textarea class='edit-textarea' name="tag_info"></textarea>
+                <br>
+            </div>
+           
+            <div>
+                <input class="edit-input" type="submit">
+            </div>
+
+        </form>
+
+    </div>
+
+{% endblock %}

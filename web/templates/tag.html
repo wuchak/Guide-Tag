@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <div>
+
+        <div class="page-head">
+            {% set id = tag_data['tag_id'] %}
+            <a class='head-left head-a' href="/tags"> ❮ Previous </a>
+            <a class="head-right head-a" href="#/edit"> EDIT</a>
+            <a class="head-right head-a" href="/delete/{{id}}">DELETE</a>
+        {# <a class='tag-right tag-a ' href=/tag/{{tag.id[] + 1 |string()}}">  Next ❯ </a>-#}   
+        </div>
+
+        <br>
+
+        {% for element,data in [ ('ID',tag_data["tag_id"]), ('NAME',tag_data["tag_name"]), 
+                                    ('TYPE',tag_data["tag_type"]), ('INFO',tag_data["tag_info"]) ] %}
+            <div class="main-mid-container">
+                <h3 class="tag-opacity"><b>{{element}}</b></h5>
+                <p>{{data}}</p><br>
+                <hr>
+            </div>
+        {% endfor %} 
+
+    </div>
+
+{% endblock %}

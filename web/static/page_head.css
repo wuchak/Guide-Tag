@@ -1,0 +1,38 @@
+.page-head{
+    margin-bottom: 40px;
+    margin-left: 0px;
+    padding: 10px 16px;
+}
+
+.head-left{
+    float: left;
+}
+
+.head-right{
+    float: right;
+}
+
+.head-a {
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(81, 81, 82);
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 100px;
+}
+
+.head-a:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+.head-div {
+    margin: auto;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    float: left;
+}

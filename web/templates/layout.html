@@ -1,0 +1,24 @@
+<html>
+
+    <head>
+        <title>JSSE PH22</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='navbar_2.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='tags.css') }}">
+        <link rel="stylesheet" type='text/css' href="{{url_for('static',filename='tag_page.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='page_head.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='search.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='edit.css')}}">
+    </head>
+
+    <body class='main-fit'>
+    
+        {% include "includes/_navbar.html" %}
+        
+        <div class="main-container">
+            {% block body %}{% endblock %}
+        </div>
+    
+    </body>
+
+</html>

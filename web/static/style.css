@@ -1,0 +1,17 @@
+.main-container{
+    padding:50px 50px;
+    margin-top:30px;
+    background-color:#a1a4a5;
+    height:1500px;
+}
+
+.main-fit{
+    margin:0;
+}
+
+.main-mid-container {
+    padding: 0.01em 16px;
+    background-color: rgb(175, 175, 175);
+    margin-left: 60px;
+    margin-right: 60px; 
+}

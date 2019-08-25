@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    {% from "includes/_formhelpers.html" import render_field %}
+
+        <div class="main-mid-container">
+
+            <form method="post">
+                
+                <dl>
+                    {{ render_field(form.tag_id) }}
+                    {{ render_field(form.tag_name) }}
+                    {{ render_field(form.tag_type) }}
+                    <br>
+                    <h3>{{ form.tag_info.label }}</h3>
+                    {{ form.tag_info(cols="50", rows="20") }}
+                </dl>
+
+                <p><input class="edit-input" type=submit value=submit>
+    
+            </form>
+    
+        </div>
+
+
+
+{% endblock %}
+
+<div>
+    <label>TAG TYPE</label>
+    <select class='edit-select' name="tag_country">
+        <option value="rubbish bin">rubbish bin</option>
+        <option value="chair">chair</option>
+        <option value="desk">desk</option>
+    </select> 
+</div>
